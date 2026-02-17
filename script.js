@@ -49,7 +49,7 @@ en: {
   "pricing.robux": "Robux Prices",
 
   "contact.title": "Contact & workflow",
-  "contact.item1": "Contact: Discord – Nerd_itadori0031",
+  "contact.item1": "Contact: Discord – Nerd Itadori ツ",
   "contact.item2": "Include: game type, rig, references.",
   "contact.item3": "Delivery: usually 1–3 days.",
   "contact.item4": "Revisions: 1 free small revision.",
@@ -241,3 +241,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
