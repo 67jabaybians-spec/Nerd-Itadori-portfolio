@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nerd Itadori - Animation Commissions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- LANGUAGE MODAL -->
+  <div id="language-modal" class="lang-modal hidden">
+    <div class="lang-box">
+      <h2 data-i18n="modal.title">Select your language</h2>
+      <p data-i18n="modal.subtitle">Choose how you want to view the site.</p>
+
+      <div class="lang-options">
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="pt">Português (BR)</button>
+        <button class="lang-btn" data-lang="es">Español</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <section class="glass">
+
+      <!-- Theme Toggle -->
+       <select id="language-dropdown" class="lang-dropdown">
+            <option value="en">English</option>
+            <option value="pt">Português (BR)</option>
+            <option value="es">Español</option>
+        </select>
+      <button id="theme-toggle" data-i18n="theme.toggle">Toggle Theme</button>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="identity">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="badge.commissions">Animation Commissions</span>
+          </div>
+
+          <p class="subtitle" data-i18n="header.subtitle">
+            Animator • Smooth, game‑ready animations for Roblox & custom rigs
+          </p>
+
+          <div class="header-meta">
+            <span class="meta-pill" data-i18n="meta.experience">7+ months experience</span>
+            <span class="meta-pill" data-i18n="meta.payments">PayPal & Robux accepted</span>
+            <span class="meta-pill" data-i18n="meta.open">Open for commissions</span>
+          </div>
+        </div>
+
+          <p class="contact-note">
+            <span data-i18n="contact.discord">Discord:</span>
+            <strong>Nerd Itadori ツ</strong><br />
+            <span data-i18n="contact.include">Include: project type, rig (R6/R15/custom), references.</span>
+          </p>
+        </div>
+      </header>
+
+      <!-- Intro + What you get -->
+      <section class="grid">
+        <article class="card">
+          <h2 data-i18n="about.title">About me</h2>
+          <p data-i18n="about.text1">
+            Hi! I’m Nerd Itadori, an animator with over 7 months of experience creating smooth,
+            game‑ready animations.
+          </p>
+          <p style="margin-top: 8px;" data-i18n="about.text2">
+            I’m currently open for commissions and accept payments via PayPal or Robux.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2 data-i18n="what.title">What you get</h2>
+          <ul class="list">
+            <li data-i18n="what.item1">Smooth, polished animations ready for your game.</li>
+            <li data-i18n="what.item2">Support for R6, R15, or custom rigs.</li>
+            <li data-i18n="what.item3">Clean timing, transitions, and poses.</li>
+            <li data-i18n="what.item4">Fast delivery and clear communication.</li>
+            <li data-i18n="what.item5">One free revision for small adjustments.</li>
+          </ul>
+
+          <div class="pill-row">
+            <span class="pill" data-i18n="pill.ready">Game‑ready</span>
+            <span class="pill" data-i18n="pill.combat">Combat & movement</span>
+            <span class="pill" data-i18n="pill.cutscenes">Cutscenes</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Pricing -->
+      <section>
+        <h2 class="section-title">
+          <span>💵</span> <span data-i18n="pricing.title">Pricing</span>
+        </h2>
+
+        <p class="subtitle" data-i18n="pricing.note">
+          Prices may vary depending on complexity. Cutscenes are an add‑on.
+        </p>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.usd">USD Prices</h3>
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th data-i18n="pricing.type">Type</th>
+                  <th data-i18n="pricing.price">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="pricing.int">Intermediate animation</td>
+                  <td>$10 – $15</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricing.complex">Complex animation</td>
+                  <td>$20 – $25</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricing.cutscene">Add‑on: Cutscene</td>
+                  <td>+ $5 – $8</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="tag">
+                <span class="tag-dot"></span>
+                <span data-i18n="paypal">PayPal</span>
+            </div>
+          </article>
+
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.robux">Robux Prices</h3>
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th data-i18n="pricing.type">Type</th>
+                  <th data-i18n="pricing.price">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="pricing.int">Intermediate animation</td>
+                  <td>R$300 – R$400</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricing.complex">Complex animation</td>
+                  <td>R$500 – R$700</td>
+                </tr>
+                <tr>
+                  <td data-i18n="pricing.cutscene">Add‑on: Cutscene</td>
+                  <td>R$250 – R$350</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="tag"><span class="tag-dot"></span> Robux</div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section>
+        <h2 class="section-title">
+          <span>📞</span> <span data-i18n="contact.title">Contact & workflow</span>
+        </h2>
+
+        <ul class="list">
+          <li data-i18n="contact.item1">Contact: Discord – Nerd_itadori0031</li>
+          <li data-i18n="contact.item2">Include: game type, rig, references.</li>
+        </ul>
+      </section>
+
+      <!-- Showcase -->
+      <section>
+        <h2 class="section-title">
+          <span>🎬</span> <span data-i18n="showcase.title">Animation showcase</span>
+        </h2>
+
+        <div class="showcase-grid">
+
+          <!-- Fall Animation -->
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/p51ocvqVtDU"
+                title="Fall Animation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div>
+              <div class="video-meta-title" data-i18n="video.fall.title"><strong>Fall Animation</strong></div>
+              <div class="video-meta-tag" data-i18n="video.fall.desc">Movement / physics‑inspired fall.</div>
+            </div>
+          </article>
+
+          <!-- Mahoraga Attack -->
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/9d3Sf7tm7mc"
+                title="Mahoraga Attack"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div>
+              <div class="video-meta-title" data-i18n="video.mahoraga.title"><strong>Mahoraga Attack</strong></div>
+              <div class="video-meta-tag" data-i18n="video.mahoraga.desc">Heavy, impactful attack animation.</div>
+            </div>
+          </article>
+
+          <!-- Head Kick Counter -->
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/yLXnS69Y9qA"
+                title="Head Kick Counter"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div>
+              <div class="video-meta-title" data-i18n="video.counter.title"><strong>Head Kick Counter</strong></div>
+              <div class="video-meta-tag" data-i18n="video.counter.desc">Fast PvP counter animation.</div>
+            </div>
+          </article>
+
+          <!-- Combo Finisher -->
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/0vf2mWYti6U"
+                title="Combo Finisher"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div>
+              <div class="video-meta-title" data-i18n="video.combo.title"><strong>Combo Finisher</strong></div>
+              <div class="video-meta-tag" data-i18n="video.combo.desc">Final hit with strong follow‑through.</div>
+            </div>
+          </article>
+
+          <!-- Bunny Dance -->
+          <article class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/Akkc8zGtWNQ"
+                title="Bunny Dance"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div>
+              <div class="video-meta-title" data-i18n="video.bunny.title"><strong>Bunny Dance (R15)</strong></div>
+              <div class="video-meta-tag" data-i18n="video.bunny.desc">Fun stylized dance animation.</div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Terms -->
+      <section>
+        <h2 class="section-title">
+          <span>📜</span> <span data-i18n="terms.title">Terms of service</span>
+        </h2>
+
+        <ul class="list tos">
+          <li data-i18n="terms.item1">Payment required before work begins.</li>
+          <li data-i18n="terms.item2">No refunds once work has started.</li>
+          <li data-i18n="terms.item3">Do not resell or redistribute animations.</li>
+          <li data-i18n="terms.item4">Credit appreciated but not required.</li>
+        </ul>
+      </section>
+
+      <p class="footer-note">
+        Layout by PixelMan • Portfolio concept for Nerd Itadori
+      </p>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
