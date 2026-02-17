@@ -106,11 +106,11 @@ en: {
 
     "pricing.title": "Preços",
     "pricing.note": "Os valores podem variar dependendo da complexidade. Cutscenes são adicionais.",
-    "pricing.usd": "Preços em USD",
+    "pricing.usd": "Preços em BRL",
     "pricing.robux": "Preços em Robux",
 
     "contact.title": "Contato & processo",
-    "contact.item1": "Contato: Discord – Nerd_itadori0031",
+    "contact.item1": "Contato: Discord – Nerd Itadori ツ",
     "contact.item2": "Inclua: tipo de jogo, rig, referências.",
     "contact.item3": "Entrega: geralmente 1–3 dias.",
     "contact.item4": "Revisões: 1 revisão gratuita para pequenos ajustes.",
@@ -167,7 +167,7 @@ en: {
     "pricing.robux": "Precios en Robux",
 
     "contact.title": "Contacto y flujo de trabajo",
-    "contact.item1": "Contacto: Discord – Nerd_itadori0031",
+    "contact.item1": "Contacto: Discord – Nerd Itadori ツ",
     "contact.item2": "Incluye: tipo de juego, rig, referencias.",
     "contact.item3": "Entrega: normalmente 1–3 días.",
     "contact.item4": "Revisiones: 1 revisión gratuita para pequeños ajustes.",
@@ -239,4 +239,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateLanguage();
   });
+
 });
