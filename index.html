@@ -101,23 +101,30 @@
         .video-card.variant-5 .video-embed { box-shadow: 0 0 40px -12px rgba(16, 185, 129, 0.35); }
         .video-card.variant-5 .video-embed:hover { transform: scale(1.025) translateY(-5px); box-shadow: 0 0 55px -10px rgba(16, 185, 129, 0.55); }
 
-        /* ==================== HAND-DRAWN CARTOON VARIANT (Toon Force) ==================== */
+        /* ==================== HAND-DRAWN CARTOON VARIANT (Toon Force) - Upgraded ==================== */
         .video-card.variant-toon .video-embed {
-            border: 7px solid #1e2937;
+            border: 9px solid #1e2937;           /* thick ink border */
             border-radius: 14px;
-            box-shadow: 
-                0 0 0 10px #f8fafc,           /* white paper layer */
-                5px 5px 0 6px #eab308,        /* bright yellow hand-drawn offset */
-                0 28px 55px -15px rgb(0 0 0 / 0.55);
-            filter: contrast(1.08) brightness(1.06);
+            background: #fffbeb;                 /* warm sketchbook paper */
+            box-shadow:
+                0 0 0 14px #fefce8,              /* paper edge layer */
+                8px 10px 0 8px #f59e0b,          /* bold orange hand-drawn offset */
+                4px 6px 0 5px #eab308,           /* bright yellow sketch layer */
+                0 30px 60px -12px rgb(0 0 0 / 0.65),
+                inset 0 6px 8px -2px rgba(255,255,255,0.75),   /* paper curl highlight */
+                inset 0 -4px 8px -2px rgba(0,0,0,0.15);        /* subtle paper shadow */
+            filter: contrast(1.15) brightness(1.1) saturate(1.08);
         }
         
         .video-card.variant-toon .video-embed:hover {
-            transform: scale(1.035) rotate(2deg);
-            box-shadow: 
-                0 0 0 10px #f8fafc,
-                8px 8px 0 8px #eab308,
-                0 35px 65px -12px rgb(234 179 8 / 0.45);
+            transform: scale(1.045) rotate(3.5deg);
+            box-shadow:
+                0 0 0 14px #fefce8,
+                12px 14px 0 10px #f59e0b,
+                6px 8px 0 7px #eab308,
+                0 40px 75px -15px rgb(245 158 11 / 0.55),
+                inset 0 8px 10px -3px rgba(255,255,255,0.85),
+                inset 0 -6px 10px -3px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -239,7 +246,7 @@
             en: {
                 modal: { title: "Select your language", subtitle: "Choose how you want to view the site." },
                 badge: "Animation Commissions — Open Now",
-                headerSubtitle: "Animator • Clean and smooth animations for roblox games, R6 R15 and Custom rigs. The custom rigs will only be animated if the rig is done in blender, and i don't do rigs",
+                headerSubtitle: "Animator • Clean and smooth animations for roblox games, R6 R15 and Custom rigs. <p>The custom rigs will only be animated if the rig is done in blender, and i don't do rigs</p>",
                 meta: {
                     experience: "7+ months experience",
                     payments: "PayPal & Robux accepted",
