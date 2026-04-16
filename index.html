@@ -100,6 +100,25 @@
        
         .video-card.variant-5 .video-embed { box-shadow: 0 0 40px -12px rgba(16, 185, 129, 0.35); }
         .video-card.variant-5 .video-embed:hover { transform: scale(1.025) translateY(-5px); box-shadow: 0 0 55px -10px rgba(16, 185, 129, 0.55); }
+
+        /* ==================== HAND-DRAWN CARTOON VARIANT (Toon Force) ==================== */
+        .video-card.variant-toon .video-embed {
+            border: 7px solid #1e2937;
+            border-radius: 14px;
+            box-shadow: 
+                0 0 0 10px #f8fafc,           /* white paper layer */
+                5px 5px 0 6px #eab308,        /* bright yellow hand-drawn offset */
+                0 28px 55px -15px rgb(0 0 0 / 0.55);
+            filter: contrast(1.08) brightness(1.06);
+        }
+        
+        .video-card.variant-toon .video-embed:hover {
+            transform: scale(1.035) rotate(2deg);
+            box-shadow: 
+                0 0 0 10px #f8fafc,
+                8px 8px 0 8px #eab308,
+                0 35px 65px -12px rgb(234 179 8 / 0.45);
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-950 to-violet-950 text-white min-h-screen">
@@ -220,7 +239,7 @@
             en: {
                 modal: { title: "Select your language", subtitle: "Choose how you want to view the site." },
                 badge: "Animation Commissions — Open Now",
-                headerSubtitle: "Animator • Smooth, game-ready animations for Roblox & custom rigs",
+                headerSubtitle: "Animator • Clean and smooth animations for roblox games, R6 R15 and Custom rigs. The custom rigs will only be animated if the rig is done in blender, and i don't do rigs",
                 meta: {
                     experience: "7+ months experience",
                     payments: "PayPal & Robux accepted",
@@ -281,7 +300,13 @@
                         { id: "counter", title: "Head Kick Counter", desc: "Fast PvP counter animation.", youtubeId: "yLXnS69Y9qA", variant: "variant-3" },
                         { id: "combo", title: "Combo Finisher", desc: "Final hit with strong follow-through.", youtubeId: "Akkc8zGtWNQ", variant: "variant-1" },
                         { id: "overreact", title: "Glad he didn't overreact...", desc: "ehhhh, idk what to say", youtubeId: "Aod_D1om0vM", variant: "variant-2" },
-                        { id: "toonforce", title: "Toon Force Animation", desc: "Cartoon-style attack in a Roblox world.", youtubeId: "0vf2mWYti6U", variant: "variant-4" }
+                        { 
+                            id: "toonforce", 
+                            title: "Toon Force Animation", 
+                            desc: "Cartoon-style attack in a Roblox world.", 
+                            youtubeId: "0vf2mWYti6U", 
+                            variant: "variant-toon" 
+                        },
                     ]
                 },
                 terms: {
@@ -297,7 +322,7 @@
             pt: {
                 modal: { title: "Selecione seu idioma", subtitle: "Escolha como deseja visualizar o site." },
                 badge: "Comissões de Animação — Aberto Agora",
-                headerSubtitle: "Animador • Animações suaves e prontas para jogos no Roblox e rigs personalizados",
+                headerSubtitle: "Animador • Animações suaves para jogos no roblox, R6 R15 e até Custom rigs. Custom rigs só serão animados caso o rig esteja pronto no blender, não faço rig!",
                 meta: {
                     experience: "7+ meses de experiência",
                     payments: "PayPal & Robux aceitos",
@@ -357,8 +382,20 @@
                         { id: "mahoraga", title: "Ataque do Mahoraga", desc: "Animação de ataque pesada e impactante.", youtubeId: "9d3Sf7tm7mc", variant: "variant-2" },
                         { id: "counter", title: "Contra-ataque de Chute na Cabeça", desc: "Animação rápida de contra-ataque em PvP.", youtubeId: "yLXnS69Y9qA", variant: "variant-3" },
                         { id: "combo", title: "Finalizador de Combo", desc: "Golpe final com forte follow-through.", youtubeId: "Akkc8zGtWNQ", variant: "variant-1" },
-                        { id: "bunny", title: "Dança do Coelhinho (R15)", desc: "Animação de dança estilizada e divertida.", youtubeId: "0vf2mWYti6U", variant: "variant-2" },
-                        { id: "toonforce", title: "Animação Toon Force", desc: "Ataque estilo cartoon em um mundo Roblox.", youtubeId: "0vf2mWYti6U", variant: "variant-4" }
+                        { 
+                            id: "overreact", 
+                            title: "Ainda bem que ele não exagerou...", 
+                            desc: "ehhhh, não sei o que dizer", 
+                            youtubeId: "Aod_D1om0vM", 
+                            variant: "variant-2" 
+                        },
+                        { 
+                            id: "toonforce", 
+                            title: "Animação Toon Force", 
+                            desc: "Ataque estilo cartoon em um mundo Roblox.", 
+                            youtubeId: "0vf2mWYti6U", 
+                            variant: "variant-toon" 
+                        },
                     ]
                 },
                 terms: {
