@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nerd Itadori — Roblox Animation Commissions | Smooth, game-ready animations for R6, R15 & custom rigs. PayPal & Robux accepted.">
     <title>Nerd Itadori • Animation Commissions</title>
-    
+   
     <script src="https://cdn.tailwindcss.com"></script>
-    
+   
     <!-- Premium CSS -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
+       
         :root {
             --accent: #a855f7;
             --accent-gradient: linear-gradient(135deg, #a855f7, #c026d3, #db2777);
@@ -22,15 +22,16 @@
             --card-bg: rgba(255, 255, 255, 0.055);
             --shadow-soft: 0 12px 45px -18px rgba(168, 85, 247, 0.22);
             --shadow-glow: 0 0 40px -12px rgba(168, 85, 247, 0.35);
-            --inner-highlight: inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
         }
-        
+       
         * {
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, box-shadow, transform, filter;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.22, 1); /* Premium ease-out */
-            transition-duration: 280ms;
+            transition: color 280ms cubic-bezier(0.4, 0, 0.22, 1),
+                        background-color 280ms cubic-bezier(0.4, 0, 0.22, 1),
+                        border-color 280ms cubic-bezier(0.4, 0, 0.22, 1),
+                        box-shadow 280ms cubic-bezier(0.4, 0, 0.22, 1),
+                        transform 280ms cubic-bezier(0.4, 0, 0.22, 1);
         }
-        
+       
         body {
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -38,130 +39,77 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        
+       
         .title-font {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 600;
             letter-spacing: -0.028em;
         }
-        
-        /* Refined Glassmorphism */
+       
+        /* Glassmorphism */
         .glass {
             background: var(--glass-bg);
             backdrop-filter: blur(28px) saturate(185%);
             -webkit-backdrop-filter: blur(28px) saturate(185%);
             border: 1px solid var(--glass-border);
-            box-shadow: var(--shadow-soft), var(--inner-highlight);
+            box-shadow: var(--shadow-soft);
         }
-        
+       
         .dark .glass {
             background: var(--glass-dark-bg);
             border: 1px solid var(--glass-dark-border);
         }
-        
-        /* Elevated Cards with better depth */
+       
+        /* Base Card */
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.09);
             border-radius: 26px;
-            box-shadow: 
-                0 10px 38px -15px rgba(0, 0, 0, 0.35),
-                var(--inner-highlight);
+            box-shadow: 0 10px 38px -15px rgba(0, 0, 0, 0.35);
         }
-        
+       
         .dark .card {
             background: rgba(15, 23, 42, 0.68);
             border: 1px solid rgba(167, 139, 250, 0.14);
-            box-shadow: 
-                0 10px 38px -15px rgba(0, 0, 0, 0.55),
-                inset 0 1px 0 0 rgba(255, 255, 255, 0.06);
         }
-        
-        /* Video Embeds - More cinematic */
+       
+        /* Video Embeds - Cinematic base */
         .video-embed {
             aspect-ratio: 16 / 9;
             border-radius: 22px;
             overflow: hidden;
-            box-shadow: var(--shadow-glow),
-                        0 28px 60px -15px rgb(0 0 0 / 0.45);
             border: 1px solid rgba(255, 255, 255, 0.07);
         }
-        
-        .video-embed:hover {
-            transform: scale(1.025) translateY(-6px);
-            box-shadow: 0 0 50px -10px rgba(168, 85, 247, 0.45);
+       
+        /* ==================== VIDEO CARD VARIANTS (fully individual styles) ==================== */
+        .video-card {
+            overflow: hidden;
         }
-        
-        /* Modal - Smoother & more luxurious entrance */
-        .lang-modal {
-            animation: fadeInModal 0.55s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        
-        @keyframes fadeInModal {
-            from {
-                opacity: 0;
-                transform: scale(0.94) translateY(24px);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-        
-        /* Luxe Pills with better highlight */
-        .pill {
-            background: var(--accent-gradient);
-            box-shadow: 
-                0 6px 18px -4px rgba(168, 85, 247, 0.45),
-                inset 0 1.5px 0 0 rgba(255, 255, 255, 0.35);
-            color: white;
-            font-weight: 600;
-            letter-spacing: -0.015em;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-        
-        /* Enhanced interactive elements */
-        button, select {
-            font-weight: 500;
-        }
-        
-        button:hover, 
-        select:hover {
-            box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.18);
-            transform: translateY(-2px);
-        }
-        
-        button:active, 
-        select:active {
-            transform: translateY(0);
-            transition-duration: 80ms;
-        }
-        
-        /* Optional subtle scrollbar polish */
-        ::-webkit-scrollbar {
-            width: 7px;
-        }
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: rgba(168, 85, 247, 0.25);
-            border-radius: 20px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(168, 85, 247, 0.4);
-        }
+       
+        .video-card.variant-1 .video-embed { box-shadow: var(--shadow-glow), 0 28px 60px -15px rgb(0 0 0 / 0.45); }
+        .video-card.variant-1 .video-embed:hover { transform: scale(1.025) translateY(-6px); box-shadow: 0 0 50px -10px rgba(168, 85, 247, 0.55); }
+       
+        .video-card.variant-2 .video-embed { box-shadow: 0 0 35px -10px rgba(236, 72, 153, 0.4), 0 25px 55px -12px rgb(0 0 0 / 0.5); border-color: rgba(236, 72, 153, 0.3); }
+        .video-card.variant-2 .video-embed:hover { transform: scale(1.03) rotate(1deg); box-shadow: 0 0 55px -8px rgba(236, 72, 153, 0.6); }
+       
+        .video-card.variant-3 .video-embed { box-shadow: 0 0 45px -15px rgba(59, 130, 246, 0.35), inset 0 2px 0 0 rgba(255,255,255,0.1); }
+        .video-card.variant-3 .video-embed:hover { transform: scale(1.02) translateY(-4px); box-shadow: 0 0 60px -10px rgba(59, 130, 246, 0.5); }
+       
+        .video-card.variant-4 .video-embed { box-shadow: 0 0 50px -15px rgba(234, 179, 8, 0.4); }
+        .video-card.variant-4 .video-embed:hover { transform: scale(1.04) translateY(-8px); box-shadow: 0 0 65px -10px rgba(234, 179, 8, 0.6); }
+       
+        .video-card.variant-5 .video-embed { box-shadow: 0 0 40px -12px rgba(16, 185, 129, 0.35); }
+        .video-card.variant-5 .video-embed:hover { transform: scale(1.025) translateY(-5px); box-shadow: 0 0 55px -10px rgba(16, 185, 129, 0.55); }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-950 to-violet-950 text-white min-h-screen">
 
     <!-- LANGUAGE MODAL -->
-    <div id="language-modal" class="lang-modal fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] hidden">
+    <div id="language-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] hidden">
         <div class="glass max-w-md w-full mx-4 rounded-3xl p-10 text-center">
-            <h2 id="modal-title" class="text-3xl font-semibold mb-2 title-font">Select your language</h2>
-            <p id="modal-subtitle" class="text-violet-200 mb-8">Choose how you want to view the site.</p>
-           
-            <div class="grid grid-cols-2 gap-4"> <!-- Changed to 2 columns since we removed Spanish -->
+            <h2 id="modal-title" class="text-3xl font-semibold mb-2 title-font"></h2>
+            <p id="modal-subtitle" class="text-violet-200 mb-8"></p>
+            <div class="grid grid-cols-2 gap-4">
                 <button onclick="setLanguage('en')" class="lang-btn glass hover:scale-105 py-6 px-4 rounded-2xl font-medium text-lg">🇬🇧 English</button>
                 <button onclick="setLanguage('pt')" class="lang-btn glass hover:scale-105 py-6 px-4 rounded-2xl font-medium text-lg">🇧🇷 Português</button>
             </div>
@@ -170,22 +118,20 @@
     </div>
 
     <main class="max-w-6xl mx-auto px-6 py-8">
-       
+      
         <!-- HEADER BAR -->
         <div class="flex justify-between items-center mb-10">
             <div class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center text-2xl">🎥</div>
                 <h1 class="title-font text-4xl tracking-tighter">Nerd Itadori</h1>
             </div>
-            
-            <!-- Controls -->
+           
             <div class="flex items-center gap-4">
                 <select id="language-dropdown" onchange="setLanguage(this.value)"
                         class="glass bg-transparent border border-white/30 text-white rounded-2xl px-5 py-3 text-sm font-medium focus:outline-none">
                     <option value="en">🇬🇧 English</option>
                     <option value="pt">🇧🇷 Português (BR)</option>
                 </select>
-
                 <button onclick="toggleTheme()" id="theme-toggle"
                         class="glass flex items-center gap-3 px-6 py-3 rounded-2xl hover:scale-105 font-medium">
                     <span id="theme-icon">☀️</span>
@@ -194,217 +140,74 @@
             </div>
         </div>
 
-        <!-- HERO / IDENTITY -->
+        <!-- HERO -->
         <div class="glass rounded-3xl p-10 md:p-14 mb-16">
             <div class="flex flex-col md:flex-row justify-between items-start gap-8">
                 <div class="flex-1">
                     <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm font-medium px-5 h-9 rounded-3xl mb-6">
                         <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                        <span id="badge-commissions">Animation Commissions — Open Now</span>
+                        <span id="badge-commissions"></span>
                     </div>
-                    <h2 id="header-subtitle" class="text-5xl md:text-6xl leading-none font-semibold title-font tracking-tighter mb-8">
-                        Animator • Smooth, game-ready animations for Roblox &amp; custom rigs
-                    </h2>
+                    <h2 id="header-subtitle" class="text-5xl md:text-6xl leading-none font-semibold title-font tracking-tighter mb-8"></h2>
                     <div class="flex flex-wrap gap-3">
-                        <span id="meta-experience" class="glass px-5 py-2 rounded-3xl text-sm">7+ months experience</span>
-                        <span id="meta-payments" class="glass px-5 py-2 rounded-3xl text-sm">PayPal &amp; Robux accepted</span>
-                        <span id="meta-open" class="glass px-5 py-2 rounded-3xl text-sm bg-emerald-400/20 text-emerald-300">Open for commissions</span>
+                        <span id="meta-experience" class="glass px-5 py-2 rounded-3xl text-sm"></span>
+                        <span id="meta-payments" class="glass px-5 py-2 rounded-3xl text-sm"></span>
+                        <span id="meta-open" class="glass px-5 py-2 rounded-3xl text-sm bg-emerald-400/20 text-emerald-300"></span>
                     </div>
                 </div>
                 <div class="text-right md:text-left max-w-xs">
-                    <p class="text-violet-200 text-lg mb-3" id="contact-discord-label">Discord:</p>
+                    <p id="contact-discord-label" class="text-violet-200 text-lg mb-3"></p>
                     <strong class="text-4xl title-font">nerditadori</strong>
-                    <p id="contact-include" class="text-sm mt-6 text-violet-200">
-                        Include in your message: project type, rig (R6/R15/custom), references
-                    </p>
+                    <p id="contact-include" class="text-sm mt-6 text-violet-200"></p>
                 </div>
             </div>
         </div>
 
-        <!-- GRID: About + What you get -->
+        <!-- ABOUT + WHAT YOU GET -->
         <div class="grid md:grid-cols-2 gap-8 mb-16">
             <!-- About -->
-            <div class="card rounded-3xl p-8">
-                <h2 id="about-title" class="text-3xl font-semibold mb-6">About me</h2>
-                <p id="about-text1" class="text-lg leading-relaxed text-violet-100"></p>
-                <p id="about-text2" class="text-lg leading-relaxed text-violet-100 mt-6"></p>
-            </div>
-
+            <div id="about-card" class="card rounded-3xl p-8"></div>
+            
             <!-- What you get -->
-            <div class="card rounded-3xl p-8">
-                <h2 id="what-title" class="text-3xl font-semibold mb-6">What you get</h2>
-                <ul id="what-list" class="space-y-4 text-lg">
-                    <li id="what-item1"></li>
-                    <li id="what-item2"></li>
-                    <li id="what-item3"></li>
-                    <li id="what-item4"></li>
-                    <li id="what-item5"></li>
-                </ul>
-                <div class="flex flex-wrap gap-3 mt-10">
-                    <span id="pill-ready" class="pill text-white text-sm font-medium px-6 py-2 rounded-3xl"></span>
-                    <span id="pill-combat" class="pill text-white text-sm font-medium px-6 py-2 rounded-3xl"></span>
-                    <span id="pill-cutscenes" class="pill text-white text-sm font-medium px-6 py-2 rounded-3xl"></span>
-                </div>
-            </div>
+            <div id="what-card" class="card rounded-3xl p-8"></div>
         </div>
 
         <!-- PRICING -->
         <div class="mb-16">
             <h2 class="flex items-center gap-3 text-4xl font-semibold mb-3">
-                <span>💵</span> <span id="pricing-title">Pricing</span>
+                <span>💵</span> <span id="pricing-title"></span>
             </h2>
             <p id="pricing-note" class="text-violet-200 mb-8"></p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- USD -->
-                <div class="card rounded-3xl p-8">
-                    <h3 id="pricing-usd" class="text-2xl font-semibold mb-6">USD Prices</h3>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="border-b border-white/10">
-                                <th id="pricing-type" class="pb-4 font-medium text-violet-200">Type</th>
-                                <th id="pricing-price" class="pb-4 font-medium text-violet-200 text-right">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-lg">
-                            <tr class="border-b border-white/10">
-                                <td id="pricing-int">Intermediate animation</td>
-                                <td class="text-right">10 – 15</td>
-                            </tr>
-                            <tr class="border-b border-white/10">
-                                <td id="pricing-complex">Complex animation</td>
-                                <td class="text-right">20 – 25</td>
-                            </tr>
-                            <tr>
-                                <td id="pricing-cutscene">Add-on: Cutscene</td>
-                                <td class="text-right">+ 5 – 8</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="mt-8 flex items-center gap-2 text-sm">
-                        <span class="w-3 h-3 bg-emerald-400 rounded-full"></span>
-                        <span id="paypal-tag">PayPal</span>
-                    </div>
-                </div>
-
-                <!-- Robux -->
-                <div class="card rounded-3xl p-8">
-                    <h3 id="pricing-robux" class="text-2xl font-semibold mb-6">Robux Prices</h3>
-                    <table class="w-full text-left">
-                        <thead>
-                            <tr class="border-b border-white/10">
-                                <th id="pricing-type-2" class="pb-4 font-medium text-violet-200">Type</th>
-                                <th id="pricing-price-2" class="pb-4 font-medium text-violet-200 text-right">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-lg">
-                            <tr class="border-b border-white/10">
-                                <td id="pricing-int-2">Intermediate animation</td>
-                                <td class="text-right">R$300 – R$400</td>
-                            </tr>
-                            <tr class="border-b border-white/10">
-                                <td id="pricing-complex-2">Complex animation</td>
-                                <td class="text-right">R$500 – R$700</td>
-                            </tr>
-                            <tr>
-                                <td id="pricing-cutscene-2">Add-on: Cutscene</td>
-                                <td class="text-right">R$250 – R$350</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="mt-8 flex items-center gap-2 text-sm">
-                        <span class="text-2xl">🪙</span>
-                        <span>Robux</span>
-                    </div>
-                </div>
+           
+            <div id="pricing-grid" class="grid md:grid-cols-2 gap-8">
+                <!-- Pricing cards injected by JS -->
             </div>
         </div>
 
         <!-- CONTACT & WORKFLOW -->
         <div class="glass rounded-3xl p-10 mb-16">
             <h2 class="flex items-center gap-3 text-4xl font-semibold mb-6">
-                <span>📞</span> <span id="contact-title">Contact &amp; workflow</span>
+                <span>📞</span> <span id="contact-title"></span>
             </h2>
-            <ul id="contact-list" class="space-y-5 text-lg">
-                <li id="contact-item1">Contact: Discord — <strong>nerditadori</strong></li>
-                <li id="contact-item2">Include in your message: game type, rig (R6/R15/custom), references</li>
-            </ul>
+            <ul id="contact-list" class="space-y-5 text-lg"></ul>
         </div>
 
         <!-- SHOWCASE -->
         <div class="mb-16">
             <h2 class="flex items-center gap-3 text-4xl font-semibold mb-8">
-                <span>🎬</span> <span id="showcase-title">Animation showcase</span>
+                <span>🎬</span> <span id="showcase-title"></span>
             </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/p51ocvqVtDU" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-fall-title" class="font-semibold text-xl">Fall Animation</div>
-                        <div id="video-fall-desc" class="text-violet-200">Movement / physics-inspired fall.</div>
-                    </div>
-                </div>
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9d3Sf7tm7mc" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-mahoraga-title" class="font-semibold text-xl">Mahoraga Attack</div>
-                        <div id="video-mahoraga-desc" class="text-violet-200">Heavy, impactful attack animation.</div>
-                    </div>
-                </div>
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yLXnS69Y9qA" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-counter-title" class="font-semibold text-xl">Head Kick Counter</div>
-                        <div id="video-counter-desc" class="text-violet-200">Fast PvP counter animation.</div>
-                    </div>
-                </div>
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Akkc8zGtWNQ" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-combo-title" class="font-semibold text-xl">Combo Finisher</div>
-                        <div id="video-combo-desc" class="text-violet-200">Final hit with strong follow-through.</div>
-                    </div>
-                </div>
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0vf2mWYti6U" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-bunny-title" class="font-semibold text-xl">Bunny Dance (R15)</div>
-                        <div id="video-bunny-desc" class="text-violet-200">Fun stylized dance animation.</div>
-                    </div>
-                </div>
-                <div class="card rounded-3xl overflow-hidden">
-                    <div class="video-embed">
-                        <iframe width="100%" height="100%" src="https://youtu.be/0vf2mWYti6U" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="p-6">
-                        <div id="video-bunny-title" class="font-semibold text-xl">Toon Force Animation</div>
-                        <div id="video-bunny-desc" class="text-violet-200">an toon force attack looking like an cartoon but in a "roblox world</div>
-                    </div>
-                </div>
+            <div id="video-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video cards injected by JS -->
             </div>
         </div>
 
         <!-- TERMS -->
         <div class="glass rounded-3xl p-10 mb-12">
             <h2 class="flex items-center gap-3 text-4xl font-semibold mb-8">
-                <span>📜</span> <span id="terms-title">Terms of service</span>
+                <span>📜</span> <span id="terms-title"></span>
             </h2>
-            <ul id="terms-list" class="list-disc pl-6 space-y-3 text-lg">
-                <li id="terms-item1">Payment required before work begins.</li>
-                <li id="terms-item2">No refunds once work has started.</li>
-                <li id="terms-item3">Do not resell or redistribute animations.</li>
-                <li id="terms-item4">Credit appreciated but not required.</li>
-            </ul>
+            <ul id="terms-list" class="list-disc pl-6 space-y-3 text-lg"></ul>
         </div>
 
         <p class="text-center text-violet-300 text-sm">Layout by PixelMan • Portfolio concept for Nerd Itadori</p>
@@ -412,151 +215,284 @@
 
     <!-- ==================== JAVASCRIPT ==================== -->
     <script>
-        // ==================== TRANSLATIONS (English + Portuguese only) ====================
-        const translations = {
+        // ==================== ALL CONTENT DATA (fully modular) ====================
+        const siteData = {
             en: {
-                "modal.title": "Select your language",
-                "modal.subtitle": "Choose how you want to view the site.",
-                "badge.commissions": "Animation Commissions — Open Now",
-                "header.subtitle": "Animator • Smooth, game-ready animations for Roblox & custom rigs",
-                "meta.experience": "7+ months experience",
-                "meta.payments": "PayPal & Robux accepted",
-                "meta.open": "Open for commissions",
-                "contact.discord": "Discord:",
-                "contact.include": "Include in your message: project type, rig (R6/R15/custom), references",
-                "about.title": "About me",
-                "about.text1": "Hi! I’m Nerd Itadori, an animator with over 7 months of experience creating smooth, game-ready animations.",
-                "about.text2": "I’m currently open for commissions and accept payments via PayPal or Robux.",
-                "what.title": "What you get",
-                "what.item1": "Smooth, polished animations ready for your game.",
-                "what.item2": "Support for R6, R15, or custom rigs.",
-                "what.item3": "Clean timing, transitions, and poses.",
-                "what.item4": "Fast delivery and clear communication.",
-                "what.item5": "One free revision for small adjustments.",
-                "pill.ready": "Game-ready",
-                "pill.combat": "Combat & movement",
-                "pill.cutscenes": "Cutscenes",
-                "pricing.title": "Pricing",
-                "pricing.note": "Prices may vary depending on complexity. Cutscenes are an add-on.",
-                "pricing.usd": "USD Prices",
-                "pricing.robux": "Robux Prices",
-                "pricing.type": "Type",
-                "pricing.price": "Price",
-                "pricing.int": "Intermediate animation",
-                "pricing.complex": "Complex animation",
-                "pricing.cutscene": "Add-on: Cutscene",
-                "paypal": "PayPal",
-                "contact.title": "Contact & workflow",
-                "contact.item1": "Contact: Discord — nerditadori",
-                "contact.item2": "Include in your message: game type, rig (R6/R15/custom), references",
-                "showcase.title": "Animation showcase",
-                "video.fall.title": "Fall Animation",
-                "video.fall.desc": "Movement / physics-inspired fall.",
-                "video.mahoraga.title": "Mahoraga Attack",
-                "video.mahoraga.desc": "Heavy, impactful attack animation.",
-                "video.counter.title": "Head Kick Counter",
-                "video.counter.desc": "Fast PvP counter animation.",
-                "video.combo.title": "Combo Finisher",
-                "video.combo.desc": "Final hit with strong follow-through.",
-                "video.bunny.title": "Bunny Dance (R15)",
-                "video.bunny.desc": "Fun stylized dance animation.",
-                "terms.title": "Terms of service",
-                "terms.item1": "Payment required before work begins.",
-                "terms.item2": "No refunds once work has started.",
-                "terms.item3": "Do not resell or redistribute animations.",
-                "terms.item4": "Credit appreciated but not required."
+                modal: { title: "Select your language", subtitle: "Choose how you want to view the site." },
+                badge: "Animation Commissions — Open Now",
+                headerSubtitle: "Animator • Smooth, game-ready animations for Roblox & custom rigs",
+                meta: {
+                    experience: "7+ months experience",
+                    payments: "PayPal & Robux accepted",
+                    open: "Open for commissions"
+                },
+                contact: {
+                    discordLabel: "Discord:",
+                    include: "Include in your message: project type, rig (R6/R15/custom), references"
+                },
+                about: {
+                    title: "About me",
+                    text1: "Hi! I’m Nerd Itadori, an animator with over 7 months of experience creating smooth, game-ready animations.",
+                    text2: "I’m currently open for commissions and accept payments via PayPal or Robux."
+                },
+                whatYouGet: {
+                    title: "What you get",
+                    items: [
+                        "Smooth, polished animations ready for your game.",
+                        "Support for R6, R15, or custom rigs.",
+                        "Clean timing, transitions, and poses.",
+                        "Fast delivery and clear communication.",
+                        "One free revision for small adjustments."
+                    ],
+                    pills: ["Game-ready", "Combat & movement", "Cutscenes"]
+                },
+                pricing: {
+                    title: "Pricing",
+                    note: "Prices may vary depending on complexity. Cutscenes are an add-on.",
+                    usd: {
+                        title: "USD Prices",
+                        rows: [
+                            { type: "Intermediate animation", price: "10 – 15" },
+                            { type: "Complex animation", price: "20 – 25" },
+                            { type: "Add-on: Cutscene", price: "+ 5 – 8" }
+                        ]
+                    },
+                    robux: {
+                        title: "Robux Prices",
+                        rows: [
+                            { type: "Intermediate animation", price: "R$300 – R$400" },
+                            { type: "Complex animation", price: "R$500 – R$700" },
+                            { type: "Add-on: Cutscene", price: "R$250 – R$350" }
+                        ]
+                    }
+                },
+                contactSection: {
+                    title: "Contact & workflow",
+                    items: [
+                        "Contact: Discord — <strong>nerditadori</strong>",
+                        "Include in your message: game type, rig (R6/R15/custom), references"
+                    ]
+                },
+                showcase: {
+                    title: "Animation showcase",
+                    videos: [
+                        { id: "fall", title: "Fall Animation", desc: "Movement / physics-inspired fall.", youtubeId: "p51ocvqVtDU", variant: "variant-1" },
+                        { id: "mahoraga", title: "Mahoraga Attack", desc: "Heavy, impactful attack animation.", youtubeId: "9d3Sf7tm7mc", variant: "variant-2" },
+                        { id: "counter", title: "Head Kick Counter", desc: "Fast PvP counter animation.", youtubeId: "yLXnS69Y9qA", variant: "variant-3" },
+                        { id: "combo", title: "Combo Finisher", desc: "Final hit with strong follow-through.", youtubeId: "Akkc8zGtWNQ", variant: "variant-1" },
+                        { id: "bunny", title: "Bunny Dance (R15)", desc: "Fun stylized dance animation.", youtubeId: "0vf2mWYti6U", variant: "variant-2" },
+                        { id: "toonforce", title: "Toon Force Animation", desc: "Cartoon-style attack in a Roblox world.", youtubeId: "0vf2mWYti6U", variant: "variant-4" }
+                    ]
+                },
+                terms: {
+                    title: "Terms of service",
+                    items: [
+                        "Payment required before work begins.",
+                        "No refunds once work has started.",
+                        "Do not resell or redistribute animations.",
+                        "Credit appreciated but not required."
+                    ]
+                }
             },
             pt: {
-                "modal.title": "Selecione seu idioma",
-                "modal.subtitle": "Escolha como deseja visualizar o site.",
-                "badge.commissions": "Comissões de Animação — Aberto Agora",
-                "header.subtitle": "Animador • Animações suaves e prontas para jogos no Roblox e rigs personalizados",
-                "meta.experience": "7+ meses de experiência",
-                "meta.payments": "PayPal & Robux aceitos",
-                "meta.open": "Aberto para comissões",
-                "contact.discord": "Discord:",
-                "contact.include": "Inclua: tipo de projeto, rig (R6/R15/personalizado), referências",
-                "about.title": "Sobre mim",
-                "about.text1": "Oi! Eu sou Nerd Itadori, um animador com mais de 7 meses de experiência criando animações suaves e prontas para jogos.",
-                "about.text2": "Estou atualmente aberto para comissões e aceito pagamentos via PayPal ou Robux.",
-                "what.title": "O que você recebe",
-                "what.item1": "Animações suaves e polidas prontas para o seu jogo.",
-                "what.item2": "Suporte para R6, R15 ou rigs personalizados.",
-                "what.item3": "Timing limpo, transições e poses.",
-                "what.item4": "Entrega rápida e comunicação clara.",
-                "what.item5": "Uma revisão gratuita para pequenos ajustes.",
-                "pill.ready": "Pronto para jogo",
-                "pill.combat": "Combate & movimento",
-                "pill.cutscenes": "Cutscenes",
-                "pricing.title": "Preços",
-                "pricing.note": "Os preços podem variar conforme a complexidade. Cutscenes são um adicional.",
-                "pricing.usd": "Preços em USD",
-                "pricing.robux": "Preços em Robux",
-                "pricing.type": "Tipo",
-                "pricing.price": "Preço",
-                "pricing.int": "Animação intermediária",
-                "pricing.complex": "Animação complexa",
-                "pricing.cutscene": "Adicional: Cutscene",
-                "paypal": "PayPal & PIX",                    // Changed for Brazil
-                "contact.title": "Contato & fluxo de trabalho",
-                "contact.item1": "Contato: Discord — nerditadori",
-                "contact.item2": "Inclua: tipo de jogo, rig, referências",
-                "showcase.title": "Portfólio de animações",
-                "video.fall.title": "Animação de Queda",
-                "video.fall.desc": "Queda inspirada em movimento e física.",
-                "video.mahoraga.title": "Ataque do Mahoraga",
-                "video.mahoraga.desc": "Animação de ataque pesada e impactante.",
-                "video.counter.title": "Contra-ataque de Chute na Cabeça",
-                "video.counter.desc": "Animação rápida de contra-ataque em PvP.",
-                "video.combo.title": "Finalizador de Combo",
-                "video.combo.desc": "Golpe final com forte follow-through.",
-                "video.bunny.title": "Dança do Coelhinho (R15)",
-                "video.bunny.desc": "Animação de dança estilizada e divertida.",
-                "terms.title": "Termos de serviço",
-                "terms.item1": "Pagamento obrigatório antes do início do trabalho.",
-                "terms.item2": "Sem reembolso após o início do trabalho.",
-                "terms.item3": "Não revenda ou redistribua as animações.",
-                "terms.item4": "Crédito é apreciado, mas não obrigatório."
+                modal: { title: "Selecione seu idioma", subtitle: "Escolha como deseja visualizar o site." },
+                badge: "Comissões de Animação — Aberto Agora",
+                headerSubtitle: "Animador • Animações suaves e prontas para jogos no Roblox e rigs personalizados",
+                meta: {
+                    experience: "7+ meses de experiência",
+                    payments: "PayPal & Robux aceitos",
+                    open: "Aberto para comissões"
+                },
+                contact: {
+                    discordLabel: "Discord:",
+                    include: "Inclua: tipo de projeto, rig (R6/R15/personalizado), referências"
+                },
+                about: {
+                    title: "Sobre mim",
+                    text1: "Oi! Eu sou Nerd Itadori, um animador com mais de 7 meses de experiência criando animações suaves e prontas para jogos.",
+                    text2: "Estou atualmente aberto para comissões e aceito pagamentos via PayPal ou Robux."
+                },
+                whatYouGet: {
+                    title: "O que você recebe",
+                    items: [
+                        "Animações suaves e polidas prontas para o seu jogo.",
+                        "Suporte para R6, R15 ou rigs personalizados.",
+                        "Timing limpo, transições e poses.",
+                        "Entrega rápida e comunicação clara.",
+                        "Uma revisão gratuita para pequenos ajustes."
+                    ],
+                    pills: ["Pronto para jogo", "Combate & movimento", "Cutscenes"]
+                },
+                pricing: {
+                    title: "Preços",
+                    note: "Os preços podem variar conforme a complexidade. Cutscenes são um adicional.",
+                    usd: {
+                        title: "Preços em USD",
+                        rows: [
+                            { type: "Animação intermediária", price: "10 – 15" },
+                            { type: "Animação complexa", price: "20 – 25" },
+                            { type: "Adicional: Cutscene", price: "+ 5 – 8" }
+                        ]
+                    },
+                    robux: {
+                        title: "Preços em Robux",
+                        rows: [
+                            { type: "Animação intermediária", price: "R$300 – R$400" },
+                            { type: "Animação complexa", price: "R$500 – R$700" },
+                            { type: "Adicional: Cutscene", price: "R$250 – R$350" }
+                        ]
+                    }
+                },
+                contactSection: {
+                    title: "Contato & fluxo de trabalho",
+                    items: [
+                        "Contato: Discord — <strong>nerditadori</strong>",
+                        "Inclua: tipo de jogo, rig, referências"
+                    ]
+                },
+                showcase: {
+                    title: "Portfólio de animações",
+                    videos: [
+                        { id: "fall", title: "Animação de Queda", desc: "Queda inspirada em movimento e física.", youtubeId: "p51ocvqVtDU", variant: "variant-1" },
+                        { id: "mahoraga", title: "Ataque do Mahoraga", desc: "Animação de ataque pesada e impactante.", youtubeId: "9d3Sf7tm7mc", variant: "variant-2" },
+                        { id: "counter", title: "Contra-ataque de Chute na Cabeça", desc: "Animação rápida de contra-ataque em PvP.", youtubeId: "yLXnS69Y9qA", variant: "variant-3" },
+                        { id: "combo", title: "Finalizador de Combo", desc: "Golpe final com forte follow-through.", youtubeId: "Akkc8zGtWNQ", variant: "variant-1" },
+                        { id: "bunny", title: "Dança do Coelhinho (R15)", desc: "Animação de dança estilizada e divertida.", youtubeId: "0vf2mWYti6U", variant: "variant-2" },
+                        { id: "toonforce", title: "Animação Toon Force", desc: "Ataque estilo cartoon em um mundo Roblox.", youtubeId: "0vf2mWYti6U", variant: "variant-4" }
+                    ]
+                },
+                terms: {
+                    title: "Termos de serviço",
+                    items: [
+                        "Pagamento obrigatório antes do início do trabalho.",
+                        "Sem reembolso após o início do trabalho.",
+                        "Não revenda ou redistribua as animações.",
+                        "Crédito é apreciado, mas não obrigatório."
+                    ]
+                }
             }
         };
 
-        // ==================== LANGUAGE SYSTEM ====================
-        function setLanguage(lang) {
-            const trans = translations[lang];
-            if (!trans) return;
+        // ==================== RENDER FUNCTIONS ====================
 
-            document.querySelectorAll('[id]').forEach(el => {
-                const key = el.id.replace(/-/g, '.');
-                if (trans[key]) {
-                    el.textContent = trans[key];
-                }
+        function renderAbout(lang) {
+            const data = siteData[lang].about;
+            const card = document.getElementById('about-card');
+            card.innerHTML = `
+                <h2 class="text-3xl font-semibold mb-6">${data.title}</h2>
+                <p class="text-lg leading-relaxed text-violet-100">${data.text1}</p>
+                <p class="text-lg leading-relaxed text-violet-100 mt-6">${data.text2}</p>
+            `;
+        }
+
+        function renderWhatYouGet(lang) {
+            const data = siteData[lang].whatYouGet;
+            const card = document.getElementById('what-card');
+            let itemsHTML = data.items.map(item => `<li class="flex items-start gap-3"><span class="text-emerald-400 mt-1">→</span> ${item}</li>`).join('');
+            let pillsHTML = data.pills.map(pill => `<span class="pill text-white text-sm font-medium px-6 py-2 rounded-3xl">${pill}</span>`).join('');
+            
+            card.innerHTML = `
+                <h2 class="text-3xl font-semibold mb-6">${data.title}</h2>
+                <ul class="space-y-4 text-lg">${itemsHTML}</ul>
+                <div class="flex flex-wrap gap-3 mt-10">${pillsHTML}</div>
+            `;
+        }
+
+        function renderPricing(lang) {
+            const data = siteData[lang].pricing;
+            const container = document.getElementById('pricing-grid');
+            
+            const usdHTML = `
+                <div class="card rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6">${data.usd.title}</h3>
+                    <table class="w-full text-left">
+                        <thead><tr class="border-b border-white/10"><th class="pb-4 font-medium text-violet-200">Type</th><th class="pb-4 font-medium text-violet-200 text-right">Price</th></tr></thead>
+                        <tbody class="text-lg">
+                            ${data.usd.rows.map(r => `<tr class="border-b border-white/10"><td>${r.type}</td><td class="text-right">${r.price}</td></tr>`).join('')}
+                        </tbody>
+                    </table>
+                    <div class="mt-8 flex items-center gap-2 text-sm"><span class="w-3 h-3 bg-emerald-400 rounded-full"></span><span>PayPal</span></div>
+                </div>`;
+            
+            const robuxHTML = `
+                <div class="card rounded-3xl p-8">
+                    <h3 class="text-2xl font-semibold mb-6">${data.robux.title}</h3>
+                    <table class="w-full text-left">
+                        <thead><tr class="border-b border-white/10"><th class="pb-4 font-medium text-violet-200">Type</th><th class="pb-4 font-medium text-violet-200 text-right">Price</th></tr></thead>
+                        <tbody class="text-lg">
+                            ${data.robux.rows.map(r => `<tr class="border-b border-white/10"><td>${r.type}</td><td class="text-right">${r.price}</td></tr>`).join('')}
+                        </tbody>
+                    </table>
+                    <div class="mt-8 flex items-center gap-2 text-sm"><span class="text-2xl">🪙</span><span>Robux</span></div>
+                </div>`;
+            
+            container.innerHTML = usdHTML + robuxHTML;
+        }
+
+        function renderContactList(lang) {
+            const data = siteData[lang].contactSection;
+            const list = document.getElementById('contact-list');
+            list.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+        }
+
+        function renderTerms(lang) {
+            const data = siteData[lang].terms;
+            const list = document.getElementById('terms-list');
+            list.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+        }
+
+        function renderVideoCards(lang) {
+            const data = siteData[lang].showcase;
+            const container = document.getElementById('video-grid');
+            container.innerHTML = '';
+
+            data.videos.forEach(video => {
+                const cardHTML = `
+                    <div class="card video-card ${video.variant} rounded-3xl overflow-hidden group">
+                        <div class="video-embed">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${video.youtubeId}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <div class="font-semibold text-xl title-font">${video.title}</div>
+                            <div class="text-violet-200 mt-1">${video.desc}</div>
+                        </div>
+                    </div>`;
+                container.innerHTML += cardHTML;
             });
+        }
 
-            // Update payment tag specifically for PayPal & PIX
-            const paypalTag = document.getElementById('paypal-tag');
-            if (paypalTag && trans['paypal']) {
-                paypalTag.textContent = trans['paypal'];
-            }
+        function renderAllContent(lang) {
+            const data = siteData[lang];
 
-            // Special handling for lists
-            const contactList = document.getElementById('contact-list');
-            if (contactList) {
-                contactList.innerHTML = `
-                    <li>${trans['contact.item1'] || ''}</li>
-                    <li>${trans['contact.item2'] || ''}</li>
-                `;
-            }
+            // Simple text elements
+            document.getElementById('modal-title').textContent = data.modal.title;
+            document.getElementById('modal-subtitle').textContent = data.modal.subtitle;
+            document.getElementById('badge-commissions').textContent = data.badge;
+            document.getElementById('header-subtitle').innerHTML = data.headerSubtitle;
+            document.getElementById('meta-experience').textContent = data.meta.experience;
+            document.getElementById('meta-payments').textContent = data.meta.payments;
+            document.getElementById('meta-open').textContent = data.meta.open;
+            document.getElementById('contact-discord-label').textContent = data.contact.discordLabel;
+            document.getElementById('contact-include').textContent = data.contact.include;
+            document.getElementById('pricing-title').textContent = data.pricing.title;
+            document.getElementById('pricing-note').textContent = data.pricing.note;
+            document.getElementById('contact-title').textContent = data.contactSection.title;
+            document.getElementById('showcase-title').textContent = data.showcase.title;
+            document.getElementById('terms-title').textContent = data.terms.title;
 
-            const termsList = document.getElementById('terms-list');
-            if (termsList) {
-                termsList.innerHTML = `
-                    <li>${trans['terms.item1'] || ''}</li>
-                    <li>${trans['terms.item2'] || ''}</li>
-                    <li>${trans['terms.item3'] || ''}</li>
-                    <li>${trans['terms.item4'] || ''}</li>
-                `;
-            }
+            // Complex sections
+            renderAbout(lang);
+            renderWhatYouGet(lang);
+            renderPricing(lang);
+            renderContactList(lang);
+            renderTerms(lang);
+            renderVideoCards(lang);
+        }
 
+        // ==================== LANGUAGE & THEME ====================
+        function setLanguage(lang) {
+            if (!siteData[lang]) return;
+            renderAllContent(lang);
             document.getElementById('language-dropdown').value = lang;
             closeModal();
             localStorage.setItem('preferredLang', lang);
@@ -566,14 +502,11 @@
             document.getElementById('language-modal').classList.add('hidden');
         }
 
-        // ==================== THEME TOGGLE ====================
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
             const isDark = document.documentElement.classList.contains('dark');
-           
             document.getElementById('theme-icon').textContent = isDark ? '🌙' : '☀️';
             document.getElementById('theme-text').textContent = isDark ? 'Light Mode' : 'Dark Mode';
-           
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
 
@@ -581,7 +514,7 @@
         window.onload = () => {
             const savedLang = localStorage.getItem('preferredLang') || 'en';
             document.getElementById('language-dropdown').value = savedLang;
-            setLanguage(savedLang);
+            renderAllContent(savedLang);
 
             if (!localStorage.getItem('preferredLang')) {
                 document.getElementById('language-modal').classList.remove('hidden');
