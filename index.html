@@ -147,10 +147,19 @@
       
         <!-- HEADER BAR -->
         <div class="flex justify-between items-center mb-10">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center text-2xl">🎥</div>
-                <h1 class="title-font text-4xl tracking-tighter">Nerd Itadori</h1>
+        <div class="flex items-center gap-3">
+            <!-- Profile Image -->
+            <div class="relative">
+                <img src="emojisorrindoedandolike.webp" 
+                     alt="Nerd Itadori"
+                     class="w-10 h-10 rounded-2xl object-cover ring-2 ring-violet-400/70 ring-offset-2 ring-offset-slate-950 shadow-xl hover:scale-110 transition-transform">
+                
+                <!-- Optional subtle glow orb -->
+                <div class="absolute -inset-1 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-3xl blur-xl opacity-30 -z-10"></div>
             </div>
+            
+            <h1 class="title-font text-4xl tracking-tighter">Nerd Itadori</h1>
+        </div>
            
             <div class="flex items-center gap-4">
                 <select id="language-dropdown" onchange="setLanguage(this.value)"
