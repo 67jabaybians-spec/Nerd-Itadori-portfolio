@@ -146,16 +146,10 @@
 
         /* ==================== HAND-DRAWN CARTOON VARIANT (Toon Force) - Upgraded ==================== */
         .video-card.variant-toon .video-embed {
-            border: 9px solid #1e2937;           /* thick ink border */
+            border: 0px solid #1e2937;           /* thick ink border */
             border-radius: 14px;
-            background: #fffbeb;                 /* warm sketchbook paper */
-            box-shadow:
-                0 0 0 14px #fefce8,              /* paper edge layer */
-                8px 10px 0 8px #f59e0b,          /* bold orange hand-drawn offset */
-                4px 6px 0 5px #eab308,           /* bright yellow sketch layer */
-                0 30px 60px -12px rgb(0 0 0 / 0.65),
-                inset 0 6px 8px -2px rgba(255,255,255,0.75),   /* paper curl highlight */
-                inset 0 -4px 8px -2px rgba(0,0,0,0.15);        /* subtle paper shadow */
+            background: transparent;                 /* warm sketchbook paper */
+    /* subtle paper shadow */
             filter: contrast(1.15) brightness(1.1) saturate(1.08);
         }
         
@@ -277,15 +271,7 @@
                 <div class="text-right md:text-left max-w-xs">
                     <p id="contact-discord-label" class="text-violet-200 text-lg mb-3"></p>
                     <strong class="text-4xl title-font">nerditadori</strong>
-                    
-                    <!-- New Discord Bot Button -->
-                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_CLIENT_ID&scope=bot" 
-                       target="_blank"
-                       class="btn-discord mt-6 inline-flex">
-                        <span class="discord-icon">🤖</span>
-                        Fill Commission Form
-                    </a>
-                    
+     
                     <p id="contact-include" class="text-sm mt-6 text-violet-200"></p>
                 </div>
             </div>
